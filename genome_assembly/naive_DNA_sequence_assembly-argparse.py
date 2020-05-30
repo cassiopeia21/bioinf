@@ -17,7 +17,6 @@ import argparse
 parser = argparse.ArgumentParser(prog='assembler', description='assembler', epilog='Start')
 parser.add_argument('-i','--reads_input', required=True, type=str, metavar='fasta_name', help='fasta file with reads')
 parser.add_argument('-k', default = 5, type=int, metavar='INT', help='lenght of k-mer')
-parser.add_argument('-o','--output_contigs', default = 'out_assem.txt', type=str, metavar='txt_name', help='txt file ')
 
 
 # In[ ]:
@@ -46,7 +45,7 @@ def receive_sequences(path):
 # In[1]:
 
 
-def match(input_fasta, threshold = 6, output = 'out_seq.txt'):
+def match(input_fasta, threshold = 6):
     
     '''
     
