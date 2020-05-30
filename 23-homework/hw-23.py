@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[7]:
 
 
 import cv2
@@ -11,7 +11,7 @@ from matplotlib.pyplot import figure
 import argparse
 
 
-# In[5]:
+# In[8]:
 
 
 parser = argparse.ArgumentParser(prog = 'edit picture',
@@ -19,20 +19,20 @@ parser = argparse.ArgumentParser(prog = 'edit picture',
                                 epilog = 'Enjou you picture!')
 
 
-# In[6]:
+# In[9]:
 
 
 parser.add_argument('-i', '--input_name', required = True, type = str,
                    metavar = 'name of picture', help = 'keep calm and give a name of your picture')
 
 
-# In[ ]:
+# In[10]:
 
 
 args = parser.parse_args()
 
 
-# In[13]:
+# In[6]:
 
 
 args = args.__dict__
@@ -41,7 +41,7 @@ args = args.__dict__
 # In[115]:
 
 
-img = cv2.imread('cat.jpg')
+img = cv2.imread(args['input_name'])
 
 
 # #### Make filters
